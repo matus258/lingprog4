@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+	<title> Aula 1</title>
+	<style>
+		.Legal{
+			color:blue;
+			background-color: yellow;
+			font-family: arial;
+			border: 2px dotted green;
+			font-size:2em;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="Legal" id="H1"> Fatec Praia Grande</h1>
+	<hr size="5em"; color="red";></hr>
+	<hr size="10px"; noshade/>	
+	<p>Isto é um <span id="teste"; class ="Legal">teste</span>...</p>
+	<input type="number" id="IP1"/>
+	<input type="number" id="IP2"/>
+	<button onclick="Programa2()">+</button>
+	<button onclick="Programa1()">-</button>
+	<h3 id="T2"></h3>
+	
+	<script>
+		let Programa1 = () => {
+			//var teste = document.getElementById("teste");
+			teste.innerHTML = "Oi";
+			alert("ok");
+			H1.style.color = "green";
+			
+			T2.innerHTML= parseInt(IP1.value) - parseInt(IP2.value);	
+		}
+		let Programa2 = () =>{
+			T2.innerHTML = parseInt(IP1.value) + parseInt(IP2.value);
+			valor = parseInt(IP1.value);
+			
+			//for(var i = 1; i <= IP1.value; i++){
+			//
+			//	if(i == IP1.value){
+			//		T2.innerHTML += i;
+			//	}else{
+			//		T2.innerHTML += i+",";
+			//	}
+			//}	
+		}
+	</script>
+</body>
+
+</html>
