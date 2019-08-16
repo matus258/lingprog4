@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+	<title> Aula 1</title>
+	<style>
+		.Legal{
+			color:blue;
+			font-family: arial;
+			border: 2px dotted green;
+			font-size:2em;
+		}
+		.FundoPadrao{
+			background-color:#936;
+		}
+	</style>
+	<link rel="shortcut icon" type="image/x-icon" href="Alien.ico"/>
+</head>
+<body>
+	<h1 class="Legal FundoPadrao" id="H1"> Fatec Praia Grande</h1>
+	<hr size="5em"; color="red";></hr>
+	<hr size="10px"; noshade/>	
+	<p>Isto é um <span id="teste"; class ="Legal">teste</span>...</p>
+	<input type="number" id="IP1"/>
+	<input type="number" id="IP2"/>
+	<button onclick="Programa1('+')">+</button>
+	<button onclick="Programa1('-')">-</button>
+	<button onclick="Programa4()">Linha</button>
+	<button onclick="Programa5()">Linha</button>
+	<h3 id="T2"></h3>
+	<ol>
+	<li>Google</li>
+	<li>Microsoft</li>
+	<li>IBM</li>
+	</ol>
+	<select id=selecao > </select>
+
+	<ol id="list">
+	</ol>	
+	<script>
+
+		cores = ['Amarelo','Azul','Green','Preto','Branco'];
+
+		let Programa1 = (result) => {
+			//if(result == '+'){ 			
+			//	T2.innerHTML = parseInt(IP1.value) + parseInt(IP2.value);
+			//}else{
+			//	T2.innerHTML = parseInt(IP1.value) - parseInt(IP2.value);
+			//}
+			//valor = parseInt(IP1.value);
+			//var teste = document.getElementById("teste");
+			//teste.innerHTML = "Oi";
+			//alert("ok");
+			H1.style.color = cores[2];
+			console.log(cores[2]);
+			
+			//T2.innerHTML= parseInt(IP1.value) - parseInt(IP2.value);	
+		}
+		let Programa2 = () =>{
+			//T2.innerHTML = parseInt(IP1.value) + parseInt(IP2.value);
+			//valor = parseInt(IP1.value);
+				
+			//for(var i = 1; i <= IP1.value; i++){
+			//
+			//	if(i == IP1.value){
+			//		T2.innerHTML += i;
+			//	}else{
+			//		T2.innerHTML += i+",";
+			//	}
+			//}	
+		}
+		let Programa3 = (operador) =>{
+			T2.innerHTML= eval(IP1.value+ operador + IP2.value); 
+		}
+		let Programa4 = () =>{
+			
+
+			cores.forEach(name => {
+				var linha = document.createElement("LI");
+				var valorLinha= document.createTextNode(name);
+				linha.appendChild(valorLinha);
+				list.appendChild(linha);
+
+			}); 
+
+		}
+
+		let Programa5 = () =>{
+			for(x = 1990; x<2019; x++){
+				var opcao = document.createElement("option");
+				var valorOption= document.createTextNode(x);
+				opcao.appendChild(valorOption );
+				selecao.appendChild(opcao);	
+			}	
+		}
+	</script>
+</body>
+
+</html>
