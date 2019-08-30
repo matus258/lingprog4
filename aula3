@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exemplo 3</title>
+<meta charset="utf-8">
+<style type="text/css">
+		#tabela1 {border: 2px solid black;
+			border-collapse: collapse; margin-top: 2cm}
+		#tabela1 th {border: 1px solid blue; padding: 5px}
+		#tabela1 td {border: 1px solid yellow; padding: 5px}
+		#imagem1 {border: 5px solid #ff4; margin-top: 0.5cm;
+					border-radius: 10px}
+</style>
+	
+</head>
+<body>
+	
+	<table id="tabela1"><caption>Materiais</caption>
+		<tr><th>Código</th><th>Descrição</th></tr>
+		<tr><td>1000</td><td>Parafuso</td></tr>
+		<tr><td>2000</td><td>Prego</td></tr>
+		<tr><td>3000</td><td>Porca</td></tr>
+	</table>
+
+	<img src="imagem1.jpg" width="150px"
+		height="100px" id="imagem1">
+
+	<a href="http://www.google.com.br" target="_blank">Google</a>
+
+	<a href="http://www.google.com.br">
+		<img src="imagem1.jpg" width="25px"
+			height="20px" id="imagem1">
+	</a>
+</body>
+</html>	
