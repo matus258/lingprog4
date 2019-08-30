@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML - Exercício HTML</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#background {background-color: blue}
+		#titulo1 {color: red;
+				text-align:center;}	
+		#tabela1 {border:1px solid black;}
+		#tabela1 th {border:1px solid black;}
+		#tabela1 td {border:1px solid black;}
+	</style>
+</head>
+<body id="background">
+	<h2 id="titulo1">Desenvolver o conteúdo a seguir utilizando HTML.</h2>
+	<h1>Computadores</h1>
+	<table id="tabela1">
+		<tr><th>NSerie</th><th>Características</th><th>Fabricante</th></tr>
+		<tr>
+			<td>1001</td>
+			<td>
+				<ul>
+					<li>CPU: Intel I3</li>
+					<li>Memória RAM: 4GB DDR3</li>
+					<li>HD: 500GB SATA</li>
+				</ul>
+			</td>
+			<td>
+				<a href="http://www.hp.com" target="_blank"><img src="hp.png" width="150px" height="150px"></a>
+			</td>
+		</tr>
+		<tr>
+			<td>2002</td>
+			<td>
+				<ul>
+					<li>CPU: AMD5</li>
+					<li>Memória RAM: 8GB DDR3</li>
+					<li>HD: 1TB SATA</li>
+				</ul>
+			</td>
+			<td>
+				<a href="http://www.lenovo.com" target="_blank"><img src="lenovo.png" target="_blank" width="150px" height="150px"></a>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>
