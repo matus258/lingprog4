@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exemplo</title>
+</head>
+<body>
+	<?php 
+		
+		$nome = 'Joao';
+		$v1 = "Ola $nome";
+		$v2 = 'Teste $nome';
+		print $v1;
+		print $v2;
+		echo 'maria '.' da Silva';
+		$i =1;
+		while ($i <= 5)
+		{
+							echo "$i <br/>";
+
+			if ($i % 2 == 0)
+			{
+			}
+			$i++;
+		}
+		$arrayName = array(10=>'joao', 20=>'maria',30=>'jose');
+		foreach ($arrayName as $key) {
+			echo "$key <br/>";
+		}
+		$vetor2 = array('nome' => 'Joao','endereco' => 'rua x', 'idade' => 100 );
+		foreach ($vetor2 as $indice => $valor) {
+			echo $indice.' :'.$valor.'<br/>';
+		}
+
+		echo 1 > 2 ? 'Maior' : 'Menor';
+		echo "<br/>";
+	?>
+</body>
+</html>
