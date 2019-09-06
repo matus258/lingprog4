@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TP1 Versão 2</title>
+	<style type="text/css">
+		#tabela {border: 1px solid blue; border-collapse: collapse;}
+		#tabela th {border: solid blue;}
+		#texto {font-size: 20mm;font-family: sans-serif;color: #936 ; }
+		a:hover {color: black; }
+{
+    color: black;
+}
+ 	</style>
+	<script type="text/javascript">
+		function Programa(){
+		vetor = ['Joao','Maria','Jose','Ana','Carlos'];
+		h3.innerHTML= vetor[key.value]
+		}
+		
+	</script>
+</head>
+<body>
+	<h1>Fatec Praia Grande</h1>
+	<h2>TP 1 Versão 2</h2>
+	<h3>Nome: <input type="text" style="font-size:20px; width:60%"></h3>
+	<h3>Nota: <input type="text" style="font-size:20px; width:60%"></h3>
+	
+	<table id="tabela">
+		<tr><th id="texto"><a>item1</a></th><th id="texto"><a>item2</a></th><th id="texto"><a>item3</a></th></tr>
+	</table>
+		<p>1. Após encerrar, preencha seu nome na caixa de texto e chame o professor para avaliação da nota (vale 2,0 pontos para compor a nota de TP)</p>
+		<p>2. Criar uma lista ordenada com três itens. Formate os textos dos itens com tamanho de 20mm, fonte sans-serif e cor diferente das pré-definidas (usar codificação RGB). Criar uma borda sólida azul em cada um dos itens da lista. Ao passar o ponteiro do mouse sobre um dos itens, a cor dos caracteres deve mudar, voltando a cor original quando o ponteiro deixar o item.</p>
+		<p>3. Criar botão e javascript acionado quando o usuário pressionar o botão, que altere o conteúdo do elemento H3 (dado) pelo nome no vetor (dado) correspondente ao índice digitado na caixa numérica (dada).</p>
+		
+		<!--Caixa Numérica-->
+		<input id="key" type="number" />
+		<button onclick="Programa()">Clique</button>
+
+		<!--Elemento H3-->
+		<h3 id="h3">modificar este conteúdo</h3>
+</body>
+</html>
