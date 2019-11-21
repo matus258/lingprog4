@@ -1,0 +1,85 @@
+<?php
+    const hostDb = "mysql:host=localhost;dbname=lp4";
+  	const usuario = "root";
+  	const senha = "";
+  	$erro = false;
+  	$marcaSel = null;
+  	if (isset($_POST['marcaSel']))
+  	{
+  		$marcaSel = $_POST['marcaSel'];
+  		setCookie('marcaSel',$marcaSel,time() + 60*60);
+  	}
+  	else
+  	{
+  		$marcaSel = isset($_COOKIE['marcaSel']) ? $_COOKIE['marcaSel'] : null;
+  	}
+	try {
+		// Cria objeto PDO
+		$c = new PDO(hostDb,usuario,senha);
+
+		// Configura o comportamento no caso de erros: levanta exceção.
+		$c->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		// Executa comando SQL
+		$marcas = $c->query('select distinct marca from automoveis')->fetchAll();
+
+		$sql = 'select * from automoveis';
+		if ($marcaSel!=null && $marcaSel!='Todas')
+		{
+			$sql .= " where marca='".$marcaSel."'";
+		}
+		$automoveis = $c->query($sql);
+
+	// Desvia para catch no caso de erros.	
+	} catch (PDOException $pex) {
+		//echo $pex->getMessage();
+		$erro=true;
+	}
+
+	if ($erro)
+	{
+		echo "erro";
+	}
+	else
+	{
+?>
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+			<form method="post">
+				<h3>Filtros</h3>
+				<label>Marca:
+					<select name="marcaSel">
+						<option>Todas</option>
+					<?php
+						foreach($marcas as $m)
+						{
+							if ($marcaSel==$m['marca'])
+							{
+								echo "<option selected>{$m['marca']}</option>";
+							}
+							else 
+							{
+								echo "<option>{$m['marca']}</option>";
+							}
+						}
+					?>
+					</select>
+				</label>
+				<input type="submit" name="enviar">
+			</form>
+			<h3>Automóveis</h3>
+			<?php
+				while ($a = $automoveis->fetch())
+				{
+					echo $a['ID'].' - '.$a['PLACA'].' - '.$a['MARCA'].' - '.$a['PRECO'].'<br/>';
+				}
+			?>
+		</body>
+		</html>
+<?php
+	}
+?>
