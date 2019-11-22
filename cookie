@@ -4,14 +4,16 @@
   	const senha = "";
   	$erro = false;
   	$marcaSel = null;
+  	session_start();
   	if (isset($_POST['marcaSel']))
   	{
   		$marcaSel = $_POST['marcaSel'];
-  		setCookie('marcaSel',$marcaSel,time() + 60*60);
+  		//setCookie('marcaSel',$marcaSel,time() + 60*60);
+  		$_SESSION['marcaSel'] = $marcaSel;
   	}
   	else
   	{
-  		$marcaSel = isset($_COOKIE['marcaSel']) ? $_COOKIE['marcaSel'] : null;
+  		$marcaSel = isset($_SESSION['marcaSel']) ? $_SESSION['marcaSel'] : null;
   	}
 	try {
 		// Cria objeto PDO
